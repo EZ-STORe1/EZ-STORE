@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA MARKET - Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>NOVA <span>ADMIN</span></h2>
+
+        <a href="admin.html">📊 لوحة التحكم</a>
+        <a href="#products">📦 المنتجات</a>
+        <a href="#add-product">➕ إضافة منتج</a>
+        <a href="index.html">🏠 المتجر</a>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>لوحة التحكم</h1>
+            <span>👤 Administrator</span>
+        </header>
+
+        <section class="stats">
+            <div class="stat">
+                <h3>المنتجات</h3>
+                <strong id="productCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <h3>الكمية المتوفرة</h3>
+                <strong id="stockCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <h3>الطلبات</h3>
+                <strong>0</strong>
+            </div>
+        </section>
+
+        <section class="panel" id="add-product">
+
+            <h2>➕ إضافة منتج جديد</h2>
+
+            <form id="productForm">
+
+                <label>اسم المنتج</label>
+                <input id="productName"
+                       placeholder="TikTok USA Account"
+                       required>
+
+                <label>التصنيف</label>
+                <select id="productCategory">
+                    <option value="TikTok">TikTok</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Twitter / X">Twitter / X</option>
+                    <option value="Games">Games</option>
+                </select>
+
+                <label>الثمن بالدولار</label>
+                <input id="productPrice"
+                       type="number"
+                       min="0.01"
+                       step="0.01"
+                       placeholder="1.99"
+                       required>
+
+                <label>الكمية المتوفرة</label>
+                <input id="productQuantity"
+                       type="number"
+                       min="0"
+                       step="1"
+                       placeholder="10"
+                       required>
+
+                <label>وصف المنتج</label>
+                <textarea id="productDescription"
+                          placeholder="معلومات عن المنتج"></textarea>
+
+                <button type="submit">
+                    ➕ إضافة المنتج
+                </button>
+
+            </form>
+        </section>
+
+        <section class="panel" id="products">
+        <section class="panel" id="bulk-import">
+    <h2>📦 إضافة حسابات بالجملة</h2>
+
+    <p>يمكنك إضافة حتى 1000 حساب دفعة واحدة.</p>
+
+    <form id="bulkForm">
+
+        <label>المنتج</label>
+        <select id="bulkProduct" required>
+            <option value="">اختر المنتج</option>
+        </select>
+
+        <label>قائمة الحسابات</label>
+        <textarea
+            id="bulkAccounts"
+            rows="12"
+            placeholder="account001&#10;account002&#10;account003"
+            required
+        ></textarea>
+
+        <p>
+            كل سطر يمثل حساباً واحداً.
+            لا تدخل كلمات المرور في النسخة التجريبية.
+        </p>
+
+        <div class="bulk-count">
+            عدد الحسابات:
+            <strong id="bulkCount">0</strong>
+        </div>
+
+        <button type="submit">
+            ➕ إضافة جميع الحسابات
+        </button>
+
+    </form>
+</section>
+
+            <h2>📦 المنتجات المضافة</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>التصنيف</th>
+                            <th>الثمن</th>
+                            <th>الكمية</th>
+                            <th>إجراء</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="productsTable"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

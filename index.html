@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA MARKET</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        EZ<span>STORE</span>
+    </div>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#games">الألعاب</a>
+        <a href="#accounts">الحسابات</a>
+        <a href="#offers">العروض</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="login-btn" onclick="openLogin()">
+            تسجيل الدخول
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            🔥 أفضل العروض الرقمية
+        </span>
+
+        <h1>
+            عالم الألعاب والحسابات
+            <span>في مكان واحد</span>
+        </h1>
+
+        <p>
+            ألعاب، حسابات رقمية، حسابات اجتماعية وعروض بأسعار تنافسية.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#games" class="primary-btn">
+                تصفح المنتجات
+            </a>
+
+            <a href="#accounts" class="secondary-btn">
+                تصفح الحسابات
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-card" style="display:none;">
+
+        <div class="crypto-icon">
+            ₮
+        </div>
+
+        <h3>الدفع بـ USDT</h3>
+
+        <p>
+            معاملات سريعة وآمنة عبر العملات الرقمية.
+        </p>
+
+        <div class="network-list">
+            <span>TRC20</span>
+            <span>BEP20</span>
+            <span>ERC20</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+    <div class="category">
+        🎮
+        <span>الألعاب</span>
+    </div>
+
+    <div class="category">
+        📸
+        <span>Instagram</span>
+    </div>
+
+    <div class="category">
+        🎵
+        <span>TikTok</span>
+    </div>
+
+    <div class="category">
+        𝕏
+        <span>Twitter / X</span>
+    </div>
+
+    <div class="category">
+        💳
+        <span>بطاقات رقمية</span>
+    </div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section class="products-section" id="games">
+
+    <div class="section-header">
+
+        <div>
+            <span>GAME STORE</span>
+            <h2>أشهر الألعاب</h2>
+        </div>
+
+        <button class="view-all">
+            عرض الكل
+        </button>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-image gta">
+
+                <span class="discount">
+                    -30%
+                </span>
+
+                <div class="game-title">
+                    GTA V
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    PC / Rockstar
+                </span>
+
+                <h3>Grand Theft Auto V</h3>
+
+                <div class="product-footer">
+
+                    <div>
+                        <del>$24.99</del>
+                        <strong>$17.49</strong>
+                    </div>
+
+                    <button onclick="openPurchase('GTA Mobile',17)">+</button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image fc">
+
+                <span class="discount">
+                    -20%
+                </span>
+
+                <div class="game-title">
+                    FOR
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                   FORTNITE
+                </span>
+
+                <h3>FORTNITE</h3>
+
+                <div class="product-footer">
+
+                    <div>
+                        <del>89</del>
+                        <strong>89</strong>
+                    </div>
+
+                    <button onclick="openPurchase('FORTNITE Mobile',89)">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image steam">
+
+                <div class="game-title">
+                    free fire
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    free fire
+                </span>
+
+                <h3>free fire </h3>
+
+                <div class="product-footer">
+
+                    <strong>$50.00</strong>
+
+                    <button onclick="openPurchase('fre fire Mobile',50)">+</button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-image pubg">
+
+                <span class="discount">
+                    HOT
+                </span>
+
+                <div class="game-title">
+                    PUBG
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    Mobile
+                </span>
+
+                <h3>PUBG Mobile</h3>
+
+                <div class="product-footer">
+
+                    <strong>$8.99</strong>
+
+                    <button onclick="openPurchase('PUBG Mobile',8.99)">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SOCIAL ACCOUNTS -->
+
+<section class="products-section social-section" id="accounts">
+
+    <div class="section-header">
+
+        <div>
+            <span>SOCIAL MARKET</span>
+            <h2>الحسابات الرقمية</h2>
+        </div>
+
+    </div>
+
+
+   
+   <div class="social-grid">
+
+        <article class="social-card instagram">
+
+            <div class="social-top">
+
+                <div class="social-icon">
+                    📸
+                </div>
+
+                <span>Instagram</span>
+
+            </div>
+
+            <h3>
+                Instagram Account
+            </h3>
+            <ul>
+                <li>✓ بريد إلكتروني مرفق</li>
+                <li>✓ تسليم فوري</li>
+                <li>✓ بيانات الدخول</li>
+            </ul>
+
+            <div class="social-price">
+
+                <strong>$3.50</strong>
+
+                 <button onclick="openPurchase('instagram Account',3.50)">
+                    شراء
+                </button>
+
+            </div>
+        </article>
+        <article class="social-card tiktok">
+
+            <div class="social-top">
+
+                <div class="social-icon">
+                    🎵
+                </div>
+
+                <span>TikTok</span>
+
+            </div>
+
+            <h3>
+                TikTok Account
+            </h3>
+
+            <ul>
+                <li>✓ حساب جاهز</li>
+                <li>✓ بريد إلكتروني</li>
+                <li>✓ تسليم تلقائي</li>
+            </ul>
+
+            <div class="social-price">
+
+                <strong>$3.50</strong>
+
+                 <button onclick="openPurchase('TikTok Account',3.50)">
+                    شراء
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="social-card twitter">
+
+            <div class="social-top">
+
+                <div class="social-icon">
+                    𝕏
+                </div>
+
+                <span>Twitter / X</span>
+
+            </div>
+
+            <h3>
+                X Account
+            </h3>
+
+            <ul>
+                <li>✓ حساب جاهز</li>
+                <li>✓ معلومات كاملة</li>
+                <li>✓ تسليم فوري</li>
+            </ul>
+
+            <div class="social-price">
+
+                <strong>$2.99</strong>
+
+                 <button onclick="openPurchase('Twitter Account',2.99)">
+                    شراء
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+<div id="instagramAddedAccounts"></div>
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div>
+        ⚡
+        <h3>تسليم سريع</h3>
+        <p>استلم منتجك مباشرة بعد تأكيد الطلب.</p>
+    </div>
+
+    <div>
+        🔒
+        <h3>دفع آمن</h3>
+        <p>الدفع باستخدام USDT والعملات الرقمية.</p>
+    </div>
+
+    <div>
+        💬
+        <h3>دعم العملاء</h3>
+        <p>مساعدة قبل وبعد الشراء.</p>
+    </div>
+
+    <div>
+        ⭐
+        <h3>منتجات موثوقة</h3>
+        <p>نظام تقييم للمنتجات والبائعين.</p>
+    </div>
+
+</section>
+
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeLogin()">
+            ×
+        </button>
+
+        <div class="modal-logo">
+            NOVA<span>MARKET</span>
+        </div>
+
+        <h2>تسجيل الدخول</h2>
+
+        <p>
+            مرحباً بعودتك 👋
+        </p>
+
+        <form onsubmit="login(event)">
+
+            <label>
+                البريد الإلكتروني
+            </label>
+
+            <input
+                type="email"
+                placeholder="example@email.com"
+                required
+            >
+
+            <label>
+                كلمة المرور
+            </label>
+
+            <input
+                type="password"
+                placeholder="••••••••"
+                required
+            >
+
+            <button
+                class="modal-submit"
+                type="submit">
+                تسجيل الدخول
+            </button>
+
+        </form>
+
+        <div class="register-link">
+            ليس لديك حساب؟
+            <a href="#">
+                إنشاء حساب
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CART -->
+
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 سلة الشراء
+        </h2>
+
+        <button onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+    <div id="cartItems"
+         class="cart-items">
+
+        <div class="empty-cart">
+            السلة فارغة
+        </div>
+
+    </div>
+
+
+    <div class="cart-bottom">
+
+        <div class="total">
+
+            <span>
+                المجموع
+            </span>
+
+            <strong>
+                $<span id="cartTotal">0.00</span>
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="showPaymentOptionsUSDT()">
+
+            الدفع بواسطة USDT ₮
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="overlay"
+    class="overlay"
+    onclick="closeEverything()">
+</div>
+
+
+<footer>
+
+    <div class="logo">
+        NOVA<span>MARKET</span>
+    </div>
+
+    <p>
+        Marketplace للمنتجات الرقمية والألعاب.
+    </p>
+
+    <span>
+        © 2026 NOVA MARKET
+    </span>
+
+</footer>
+<!-- PURCHASE MODAL -->
+
+<div class="purchase-modal" id="purchaseModal">
+  <div class="purchase-box">
+
+    <button class="purchase-close"
+            onclick="closePurchase()">×</button>
+
+    <h2>🛒 إتمام الطلب</h2>
+    <p>حدد الكمية والبريد الإلكتروني للتسليم</p>
+
+    <form id="purchaseForm">
+
+      <label>المنتج</label>
+      <input id="purchaseProduct" readonly>
+
+      <label>الكمية</label>
+      <div class="quantity-control">
+        <button type="button" onclick="changeQty(-1)">−</button>
+        <input id="purchaseQty" type="number"
+               min="1" max="100" value="1" required>
+        <button type="button" onclick="changeQty(1)">+</button>
+      </div>
+
+      <label>البريد الإلكتروني لاستلام الحساب</label>
+      <input id="purchaseEmail"
+             type="email"
+             placeholder="example@gmail.com"
+             autocomplete="email"
+             required>
+
+      <div class="purchase-total">
+        <span>المجموع</span>
+        <strong id="purchaseTotal">$0.00</strong>
+      </div>
+
+      <button class="purchase-pay" type="submit">
+        متابعة الدفع USDT ₮
+      </button>
+
+    </form>
+
+  </div>
+</div>
+<div id="paymentModal" class="modal" style="display:none;">
+    <div class="modal-box">
+
+        <button type="button"
+                onclick="closePaymentOptions()">
+            ✕
+        </button>
+
+        <h2>💳 اختر طريقة الدفع</h2>
+
+        <label for="checkoutNetwork">الدفع بواسطة USDT</label>
+
+        <select id="checkoutNetwork">
+            <option value="TRC20">USDT TRC20</option>
+            <option value="BEP20">USDT BEP20</option>
+            <option value="ERC20">USDT ERC20</option>
+        </select>
+
+        <p>اختر الشبكة المناسبة لإتمام عملية الشراء.</p>
+
+        <button type="button"
+                onclick="alert('الدفع الحقيقي غير مفعل بعد')">
+            متابعة الدفع
+        </button>
+
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
+<!-- الكود القديم ديال الموقع -->
+
+<button onclick="shareSite()">📤 مشاركة الموقع</button>
+
+<script>
+function shareSite() {
+  const link = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      title: "متجر الألعاب",
+      url: link
+    });
+  } else {
+    navigator.clipboard.writeText(link);
+    alert("تم نسخ الرابط ✅");
+  }
+}
+</script>
+
+</body>
+</html>
