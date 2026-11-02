@@ -1,0 +1,1 @@
+EZ-STORE R5: START_EZSTORE.bat then http://localhost:3200 (NOT 3000); ADMIN at http://localhost:3200/admin; see README_DARIJA.md

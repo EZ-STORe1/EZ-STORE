@@ -1,0 +1,1 @@
+EZ-STORE USDT TRC20 ONLY. See README_DARIJA.md and USDT_ONLY_UPDATE.txt. PayPal checkout removed. Bulk deletion added to Admin > My saved accounts.

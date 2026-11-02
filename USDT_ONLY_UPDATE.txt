@@ -1,0 +1,1 @@
+USDT TRC20 only. Configure USDT_TRC20_ADDRESS and SMTP in .env. Payment claims must be independently verified on TRON before admin confirmation. Admin can delete a chosen number of available accounts via My saved accounts. Existing SQLite data and encryption keys must be preserved when upgrading. PayPal routes removed; legacy PayPal DB columns remain for compatibility.

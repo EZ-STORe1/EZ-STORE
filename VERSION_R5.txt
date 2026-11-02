@@ -1,0 +1,7 @@
+EZ-STORE-R5-2026-11-02
+Main store: http://localhost:3200
+Admin: http://localhost:3200/admin
+Version check: http://localhost:3200/api/health
+
+This is a local Node.js build. Do not open localhost:3000; that is an old version.
+Do not upload .env or data/ to GitHub.

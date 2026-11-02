@@ -1,0 +1,30 @@
+EZ-STORE R5 — TEST REPORT (2026-11-02)
+======================================
+Project source reviewed from attached server(6).js and prior complete ZIP.
+
+PASS: npm run check (server, storefront JS, admin JS and config syntax).
+PASS: npm test (9 structural/catalog tests, including no admin icon in public HTML).
+PASS: live Node/SQLite HTTP tests with temporary generated .env and fake inventory:
+- GET /api/health build exactly EZ-STORE-R5-2026-11-02
+- GET /api/products returns 12 products
+- public HTML contains no owner icon or /admin link
+- unauthenticated owner inventory GET returns 401
+- unauthenticated bulk DELETE request returns 401
+- checkout disabled if USDT address and SMTP are not configured
+- successful owner login, add 3, reject duplicates, reject over-delete
+- delete exactly 2 and leave product stock of other categories intact
+PASS: isolated additional USDT workflow using an invalid test-only wallet and
+      dummy SMTP: checkout reserves a single account, deletion touches only
+      2 AVAILABLE accounts, rejects deleting 3, reject claim releases reservation.
+      No real payment and no real SMTP delivery happened.
+PASS: real Chromium rendered actual storefront HTML/CSS/JS with a simulated
+      catalog API; 12 product cards, person/admin icon absent.
+PASS: real Chromium rendered actual Admin HTML/CSS/JS with a simulated API;
+      added 3, deleted exactly 2 using the UI, no JavaScript page errors.
+      Sandbox Chromium cannot navigate localhost directly; API and UI were
+      tested separately (not an end-to-end browser-to-server integration).
+NOT TESTED: Windows BAT on user's PC, real SMTP email delivery, real blockchain
+            payment confirmations, availability on public internet/Cloudflare.
+
+Customer checkout is not enabled until BOTH wallet and SMTP are configured.
+USDT claims are manually verified by store owner before marking paid.
